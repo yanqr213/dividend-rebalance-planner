@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dividend-rebalance-planner"
+version = "0.1.0"
+description = "Offline dividend and cashflow rebalance planner for local CSV portfolio inputs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "OpenAI Codex" }
+]
+keywords = ["finance", "portfolio", "dividend", "rebalance", "cli", "offline"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Office/Business :: Financial :: Investment",
+]
+
+[project.urls]
+Homepage = "https://github.com/yanqr213/dividend-rebalance-planner"
+Repository = "https://github.com/yanqr213/dividend-rebalance-planner"
+Issues = "https://github.com/yanqr213/dividend-rebalance-planner/issues"
+
+[project.scripts]
+dividend-rebalance-planner = "dividend_rebalance_planner.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
