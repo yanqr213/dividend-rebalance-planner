@@ -8,7 +8,7 @@ import unittest
 from pathlib import Path
 
 
-PROJECT_DIR = Path(r"E:\Documents\New project\public-projects\finance\dividend-rebalance-planner")
+PROJECT_DIR = Path(__file__).resolve().parents[1]
 
 
 class CliTests(unittest.TestCase):
@@ -60,4 +60,3 @@ class CliTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
